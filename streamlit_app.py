@@ -1,4 +1,11 @@
-import streamlit as st
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+
+def load_json(file):
+    path = os.path.join(BASE_DIR, file)
+    with open(path, 'r') as f:
+        return json.load(f)import streamlit as st
 import json
 import pandas as pd
 
